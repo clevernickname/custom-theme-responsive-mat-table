@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  overflow: auto;
+  background-color: #e5e5e5;
+}
+
+.card-title {
+  color: #333333;
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.card-title-icon {
+  height: 18px;
+  width: 16px;
+  margin-right: 1%;
+}
+
+.content {
+  margin: 0;
+}
+
+fieldset {
+  padding-top: 20px;
+}
+
+fieldset > div {
+  background-color: green;
+  display: inline-block;
+  width: 100%;
+}
+
+.header {
+  height: 33px;
+  width: 279px;
+  color: #333333;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 33px;
+  margin: 30px 0 0 0;
+}
+
+.header2 {
+  height: 33px;
+  width: 279px;
+  color: #333333;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 33px;
+  margin: 60px 0 30px 0;
+}
+
+.header3 {
+  height: 33px;
+  width: 100%;
+  color: #333333;
+  font-family: "Open Sans";
+  font-size: 24px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 33px;
+  margin: 60px 0 30px 0;
+}
+
+.mat-divider {
+  padding: 0.4%;
+}
+
+.mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: #00a550;
+  height: 6px;
+}
+
+.mat-list .mat-list-item {
+  height: 25px; /* default is 72px */
+}
+
+.switch {
+  display: block;
+  background-color: #f2f2f3;
+}
+
+@import "./app/mat-table.responsive/mat-table-responsive.directive.scss";
