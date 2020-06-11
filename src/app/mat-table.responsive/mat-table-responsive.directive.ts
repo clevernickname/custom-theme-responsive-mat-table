@@ -52,10 +52,10 @@ export class MatTableResponsiveDirective
             HTMLTableRowElement,
             HTMLCollectionOf<HTMLTableRowElement>
           ]) => [
-            [...(<any>headRow.children)].map(
+            [...(headRow.children as any)].map(
               (headerCell) => headerCell.textContent
             ),
-            [...(<any>bodyRows)].map((row) => [...row.children]),
+            [...(bodyRows as any)].map((row) => [...row.children]),
           ]
         ),
         takeUntil(this.onDestroy$)

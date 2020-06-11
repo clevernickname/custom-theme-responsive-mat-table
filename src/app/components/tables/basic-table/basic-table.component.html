@@ -1,0 +1,42 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Basic Table</mat-card-title>
+    <mat-card-subtitle>Using matTableResponsive Module</mat-card-subtitle>
+  </mat-card-header>
+  <table
+    mat-table
+    [dataSource]="dataSource"
+    matTableResponsive
+    class="mat-elevation-z8"
+  >
+    <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef>No.</th>
+      <td mat-cell *matCellDef="let animal">{{ animal.position }}</td>
+    </ng-container>
+
+    <!-- Animal Column -->
+    <ng-container matColumnDef="animal">
+      <th mat-header-cell *matHeaderCellDef>Animal</th>
+      <td mat-cell *matCellDef="let animal">{{ animal.animal }}</td>
+    </ng-container>
+
+    <!--Deathds Column -->
+    <ng-container matColumnDef="deaths">
+      <th mat-header-cell *matHeaderCellDef>Deaths</th>
+      <td mat-cell *matCellDef="let animal">{{ animal.deaths }}</td>
+    </ng-container>
+
+    <!-- Description Column -->
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef>Description</th>
+      <td mat-cell *matCellDef="let animal">{{ animal.description }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</mat-card>
